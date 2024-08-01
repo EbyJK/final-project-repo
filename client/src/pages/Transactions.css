@@ -1,0 +1,25 @@
+.transaction-heading{
+    position: fixed;
+    top: 150px;
+    left: 130px;
+}
+
+.data-div-transaction{
+position: fixed;
+left:120px;
+top: 230px;
+max-height: 400px;
+overflow-y: auto;
+}
+
+#transactions-table{
+width: 1370px;
+}
+
+.no-transactions-message-admin {
+    text-align: center;
+    padding: 20px;
+    color: #f60a0a;
+    font-size: 48px;
+  }
+  
