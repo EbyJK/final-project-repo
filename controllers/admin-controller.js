@@ -38,6 +38,20 @@ const getTransactions = async(req,res)=>{
     }
 }
 
+const getUpdatedTransactions = async(req,res)=>{
+    try {
+        const id = req.params.id;
+        const transactions = await Transaction.find({userid:id})
+        console.log(transactions);
+        if(!transactions || transactions.length===0){
+            return res.status(404).json({message : 'No Transactions Found'})
+        }
+        return res.status(200).json(transactions);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const getUserData=async(req,res)=>{
     try {
         const id = req.params.id;
@@ -53,4 +67,4 @@ const getUserData=async(req,res)=>{
 }
 
 
-module.exports = {getAllUsers, deleteUserById, getTransactions, getUserData};
+module.exports = {getAllUsers, deleteUserById, getTransactions, getUserData, getUpdatedTransactions};

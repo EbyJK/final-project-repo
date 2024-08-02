@@ -13,9 +13,8 @@ import Footer from '../components/Layout/Footer';
 const Analytics = () => {
 
     const location = useLocation();
-    const { allTransaction } = location.state || {};
+    const { allTransaction,loginUser } = location.state || {};
 
-    const username  = loginUserName;
 
 
 
@@ -148,6 +147,10 @@ const generateMonths = (start, end) => {
     <div className='dashboard-header'>
         <DashboardNavbar/>
     </div>
+
+    <div className='dashboard-welcome'>
+      <h1 className='transaction-heading'>Analytics of {loginUser.name}</h1>
+      </div>
 
     <div className='heading-title'>
         <h2 className='pie-heading'>Pie Chart</h2>

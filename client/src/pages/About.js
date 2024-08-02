@@ -12,7 +12,7 @@ const About = () => {
         </div>
         
         <div className="about-container">
-            <h1 style={{color:"blue"}}>About InsightTrack</h1>
+            <h1 style={{color:"#C0C0C0"}}>About InsightTrack</h1>
             <h2 style={{color:'blue'}}>Our Mission</h2>
             <p>At InsightTrack, our mission is to empower individuals and businesses to take control of their finances through intuitive and powerful tools. We believe that effective financial management is key to achieving personal and professional goals.</p>
             <h2 style={{color:'blue'}}>What We Do</h2>
@@ -28,7 +28,7 @@ const About = () => {
                 <li><strong>Mobile Optimization:</strong>  Improved functionality on mobile devices.</li>
                 <li><strong>Integration:</strong>  Seamless connection with third-party financial services.</li>
             </ul>
-            <h2 style={{color:'blue'}}>Contact Us</h2>
+            <h2 style={{color:'#C0C0C0'}}>Contact Us</h2>
             <p>Have questions or need support? Reach out to us at <a href='www.example.com'>support@insighttrack.com</a>.</p>
             <p>Thank you for choosing InsightTrack for your personal finance management needs!</p>
         </div>

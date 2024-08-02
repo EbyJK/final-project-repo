@@ -14,7 +14,7 @@ const { RangePicker } = DatePicker;
 
 const Dashboard = () => {
 
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const[fetching,setFetching]=useState(false);
   const [viewData, setViewData] = useState('table');
   const [showModal, setShowModal] = useState(false);
@@ -22,6 +22,7 @@ const Dashboard = () => {
   const [frequency, setFrequency] = useState('7');
   const [selectedDate, setSelectedDate] = useState([]);
   const [editable, setEditable] = useState(null);
+  const [loginUser,setLoginUser] = useState('');
   const [type, setType] = useState('all');
   const navigate = useNavigate();
 
@@ -111,7 +112,7 @@ const Dashboard = () => {
     }
   };
 
-  const [loginUser, setLoginUser] = useState('');
+
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
@@ -125,7 +126,7 @@ const Dashboard = () => {
   
 
   const viewAnalytics = () => {
-    navigate('/analytics-data', { state: { allTransaction } });
+    navigate('/analytics-data', { state: { allTransaction,loginUser } });
   };
 
   const formatDate=(date)=>{
@@ -179,7 +180,7 @@ const alert = ()=>{
             </Select>
           </div>
 
-          <div className='analytics-btn'>
+          <div className='analytics-btn-user'>
             <button className='btn btn-primary' onClick={() => viewAnalytics()}>View Analytics</button>
           </div>
 
@@ -232,7 +233,7 @@ const alert = ()=>{
     <div>
     <Modal title={editable ? "Edit Transaction" : "Add Transaction"} 
   open={showModal} 
-  onCancel={() => setShowModal(false)} 
+  onCancel={() => setShowModal(false)}
   footer={false}>
           <Form layout="vertical" 
   onFinish={handleSubmit} 

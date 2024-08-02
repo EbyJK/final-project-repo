@@ -63,3 +63,9 @@
     top: 200px;
     right: 200px;
 }
+
+.transaction-heading{
+    position: fixed;
+    left: 590px;
+    top: 150px;
+}

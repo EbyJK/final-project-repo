@@ -10,6 +10,7 @@ import AdminContacts from './pages/AdminContacts';
 import Transactions from './pages/Transactions';
 import About from './pages/About';
 import Analytics from './pages/Analytics';
+import AdminAnalytics from './pages/AdminAnalytics';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/admin/users' element={<AdminUsers/>}/>
         <Route path='/admin/contacts' element={<AdminContacts/>}/>
         <Route path='/admin/transactions' element = {<Transactions/>}/>
+        <Route path='/admin/analytics-data' element = {<AdminAnalytics/>}/>
         <Route path='/about' element={<About/>}/>
       </Routes>
     </>
